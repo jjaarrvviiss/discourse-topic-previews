@@ -165,7 +165,7 @@ export default {
               transitionDuration: '0.7s',
               percentPosition: true,
               Width: '.grid-sizer',
-              gutter: 6
+              gutter: 10
             });
 
             msnry = this.$('.grid').data('masonry');
