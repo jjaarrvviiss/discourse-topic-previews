@@ -1,4 +1,8 @@
 <div class="topic-title">
+  {{#if tilesOrSocial}}
+    {{raw "list/topic-users" topic=topic posterNames=posterNames}}
+  {{/if}}
+
   <span class='link-top-line'>
     {{raw-plugin-outlet name="topic-list-before-status"}}
     {{raw "topic-status" topic=topic}}
@@ -22,8 +26,4 @@
       {{raw-plugin-outlet name="topic-list-after-title"}}
     {{/unless}}
   </span>
-
-  {{#if tilesOrSocial}}
-    {{raw "list/topic-users" topic=topic posterNames=posterNames}}
-  {{/if}}
 </div>
