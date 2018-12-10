@@ -10,7 +10,7 @@
   {{#unless hideCategory}}
     {{#unless topic.isPinnedUncategorized}}
       <span class="topic-category">
-        {{raw "list/category-column" category=topic.category}}
+        {{category-link topic.category}}
       </span>
     {{/unless}}
   {{/unless}}
