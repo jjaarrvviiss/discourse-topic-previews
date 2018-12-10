@@ -1,6 +1,13 @@
 <div class="topic-title">
   {{#if tilesOrSocial}}
     {{raw "list/topic-users" topic=topic posterNames=posterNames}}
+    {{#unless hideCategory}}
+      {{#unless topic.isPinnedUncategorized}}
+        <span class="topic-category">
+          {{raw "list/category-column" category=topic.category}}
+        </span>
+      {{/unless}}
+    {{/unless}}
   {{/if}}
 
   <span class='link-top-line'>
