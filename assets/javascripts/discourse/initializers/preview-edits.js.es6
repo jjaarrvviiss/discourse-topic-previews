@@ -257,14 +257,14 @@ export default {
 
         _setupExcerptClick() {
           this.$('.topic-excerpt').on('click.topic-excerpt', () => {
-            DiscourseURL.routeTo(this.get('topic.lastReadUrl'));
+            DiscourseURL.routeTo(this.get('topic.url'));
           });
         },
 
         click(event) {
           if (this.get('tilesStyle')){
             if ($(event.target).parents('.list-button').length == 0) {
-              DiscourseURL.routeTo(this.get('topic.lastReadUrl'));
+              DiscourseURL.routeTo(this.get('topic.url'));
             }
           }
         },
