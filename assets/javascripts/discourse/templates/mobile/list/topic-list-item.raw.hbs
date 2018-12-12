@@ -1,5 +1,6 @@
 <td>
   {{#if socialStyle}}
+    {{raw "list/topic-users" topic=topic posterNames=posterNames}}
     {{raw "list/topic-list-title" topic=topic socialStyle=socialStyle mobileView=site.mobileView}}
     {{#if showThumbnail}}
       {{raw "list/topic-thumbnail" topic=topic thumbnails=thumbnails}}
