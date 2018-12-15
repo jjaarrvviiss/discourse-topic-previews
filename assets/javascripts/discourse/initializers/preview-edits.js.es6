@@ -195,11 +195,17 @@ export default {
           const topic = this.get('topic');
           const thumbnails = topic.get('thumbnails');
           const defaultThumbnail = this.get('defaultThumbnail');
+          const creatorGroup = this.get('topic.creator.primary_group_name')
 
           if (this.get('tilesStyle')) {
-            // needs 'div's for masonry
-            this.set('tagName', 'div');
-            this.classNames = ['grid-item'];
+            if (creatorGroup == 'IMMORTAL' || creatorGroup == 'OATHSWORN') {
+              this.set('tagName', 'div');
+              this.classNames = ['grid-item','creator-highlight'];
+            } else {
+              // needs 'div's for masonry
+              this.set('tagName', 'div');
+              this.classNames = ['grid-item'];
+            }
           };
 
           if (thumbnails) {
