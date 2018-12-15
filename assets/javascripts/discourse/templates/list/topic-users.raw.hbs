@@ -1,11 +1,9 @@
 <div class='topic-users'>
   <div class="inline">
-    {{#each topic.posters as |poster|}}
-      <a href="{{poster.user.path}}" data-user-card="{{poster.user.username}}" class="{{poster.extras}}">
-        {{avatar poster avatarTemplatePath="user.avatar_template" usernamePath="user.username" imageSize="large"}}
-        <span class="poster-name">{{poster.user.username}}</span>
-      </a>
-    {{/each}}
+    <a href="{{topic.creator.path}}" data-user-card="{{topic.creator.username}}" class="{{topic.creator.extras}}">
+      {{avatar topic.creator imageSize="large"}}
+      <span class="poster-name">{{topic.creator.username}}</span>
+    </a>
   </div>
   {{#unless hideCategory}}
     {{#unless topic.isPinnedUncategorized}}
